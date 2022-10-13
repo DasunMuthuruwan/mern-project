@@ -54,10 +54,9 @@ const updateWorkout = async (req, res) => {
         } catch (error) {
             res.status(500).json({ error: error.message })
         }
+    } else {
+        res.status(404).json({ error: "Not found workout" })
     }
-
-    res.status(404).json({ error: "Not found workout" })
-
 }
 
 
